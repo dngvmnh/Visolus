@@ -42,7 +42,7 @@ with mp_pose.Pose(
         results.pose_landmarks,
         mp_pose.POSE_CONNECTIONS,
         landmark_drawing_spec=mp_drawing_styles.get_default_pose_landmarks_style())
-    cv2.imwrite('/tmp/annotated_image' + str(idx) + '.png', annotated_image)
+    cv2.imwrite('annotated_image' + str(idx) + '.png', annotated_image)
     # Plot pose world landmarks.
     mp_drawing.plot_landmarks(
         results.pose_world_landmarks, mp_pose.POSE_CONNECTIONS)
