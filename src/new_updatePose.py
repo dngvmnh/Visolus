@@ -36,9 +36,9 @@ while True:
             (11, 23, 25),  # Left side of body
             (12, 24, 26),  # Right side of body
             (0, 11, 12),   # Neck (head to shoulders)
-            (11, 0, 12),    # Shoulders (left shoulder, head, right shoulder)
+            (11, 0, 12),   # Shoulders (left shoulder, head, right shoulder)
             (23, 11, 13),  # Left side of body to left arm
-            (24, 12, 14),   # Right side of body to right arm
+            (24, 12, 14),  # Right side of body to right arm
             (11, 23, 25),  # Left leg (hip, knee, ankle)
             (12, 24, 26)   # Right leg (hip, knee, ankle)
         ]
@@ -61,7 +61,7 @@ while True:
                                                offset=5)
 
             # Print the angle and the result of the angle check
-            print(f'Angle at {mid}: {angle}, Close to 50: {isCloseAngle}')
+            # print(f'Angle at {mid}: {angle}, Close to 50: {isCloseAngle}')
 
     # Display the image
     cv2.imshow("Image", img)
