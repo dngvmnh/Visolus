@@ -3,7 +3,7 @@ import numpy as np
 import time
 import PoseModule as pm
 
-cap = cv2.VideoCapture(0, cv2.CAP_DSHOW) # this is the magic!
+cap = cv2.VideoCapture(0, cv2.CAP_DSHOW) 
 
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1200)
