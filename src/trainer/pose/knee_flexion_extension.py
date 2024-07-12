@@ -3,7 +3,7 @@ import numpy as np
 import time
 import PoseModule as pm
 
-cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+cap = cv2.VideoCapture("src/trainer/test_vid/knee_flexion_extension.mp4")
 
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1200)
@@ -17,10 +17,10 @@ pTime = 0
 while True:
     success, img = cap.read()
     
-    img = detector.findPose(img, False)
-    lmList = detector.findPosition(img, False)
+    img = detector.findPose(img)
+    lmList = detector.findPosition(img)
     # print(lmList)
-    if len(lmList) != 0:
+    if len(lmList) != 0 and img is not None:
         # Right Arm
         angle = detector.findAngle(img, 24, 26, 28)
         # # Left Arm
