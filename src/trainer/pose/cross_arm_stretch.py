@@ -21,15 +21,12 @@ while True:
     lmList = detector.findPosition(img, False)
     # print(lmList)
     if len(lmList) != 0:
-        # Right Arm
         angle = detector.findAngle(img, 11, 12, 14)
-        # # Left Arm
         per = np.interp(angle, (10, 100), (0, 100))
         per = 100 - per
         bar = np.interp(angle, (10, 100), (100, 650))
         # print(angle, per)
 
-        # Check for the dumbbell curls
         color = (52, 199, 89)
         if per == 100:
             color = (52, 199, 89)
@@ -41,15 +38,11 @@ while True:
             if dir == 1:
                 count += 0.5
                 dir = 0
-
-        print(per)
-        
-        # Draw Bar
+     
         cv2.rectangle(img, (1100, 100), (1175, 650), color, 3)
         cv2.rectangle(img, (1100, int(bar)), (1175, 650), color, cv2.FILLED)
         cv2.putText(img, f'{int(per)} %', (1100, 75), cv2.FONT_HERSHEY_PLAIN, 4, color, 4)
 
-        # Draw Curl Count
         # cv2.rectangle(img, (0, 450), (250, 720), (52, 199, 89), cv2.FILLED)
         cv2.putText(img, str(int(count)), (45, 670), cv2.FONT_HERSHEY_PLAIN, 15, (52, 199, 89), 25)
 
