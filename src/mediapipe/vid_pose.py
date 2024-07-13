@@ -7,8 +7,9 @@ mp_pose = mp.solutions.pose
 
 # For webcam input:
 VIDEO_FILES = "VIDEO_FILES/20240604_192811.mp4"
-# cap = cv2.VideoCapture(0)
-cap = cv2.VideoCapture(VIDEO_FILES)
+
+cap = cv2.VideoCapture(0)
+# cap = cv2.VideoCapture(VIDEO_FILES)
 
 with mp_pose.Pose(
     min_detection_confidence=0.5,
@@ -17,6 +18,7 @@ with mp_pose.Pose(
     success, image = cap.read()
     if not success:
       print("Ignoring empty camera frame.")
+
       # If loading a video, use 'break' instead of 'continue'.
       continue
 
@@ -36,6 +38,7 @@ with mp_pose.Pose(
         results.pose_landmarks,
         mp_pose.POSE_CONNECTIONS,
         landmark_drawing_spec=mp_drawing_styles.get_default_pose_landmarks_style())
+    
     # Flip the image horizontally for a selfie-view display.
     cv2.imshow('MediaPipe Pose', cv2.flip(image, 1))
     if cv2.waitKey(1) & 0xFF == 27:

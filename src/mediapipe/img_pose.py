@@ -17,6 +17,7 @@ with mp_pose.Pose(
   for idx, file in enumerate(IMAGE_FILES):
     image = cv2.imread(file)
     image_height, image_width, _ = image.shape
+
     # Convert the BGR image to RGB before processing.
     results = pose.process(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 
@@ -29,6 +30,7 @@ with mp_pose.Pose(
     )
 
     annotated_image = image.copy()
+
     # Draw segmentation on the image.
     # To improve segmentation around boundaries, consider applying a joint
     # bilateral filter to "results.segmentation_mask" with "image".
@@ -36,12 +38,14 @@ with mp_pose.Pose(
     bg_image = np.zeros(image.shape, dtype=np.uint8)
     bg_image[:] = BG_COLOR
     annotated_image = np.where(condition, annotated_image, bg_image)
+
     # Draw pose landmarks on the image.
     mp_drawing.draw_landmarks(
         annotated_image,
         results.pose_landmarks,
         mp_pose.POSE_CONNECTIONS,
         landmark_drawing_spec=mp_drawing_styles.get_default_pose_landmarks_style())
+    
     # cv2.imwrite('annotated_image' + str(idx) + '.png', annotated_image)
     # Plot pose world landmarks.
     mp_drawing.plot_landmarks(
