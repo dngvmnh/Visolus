@@ -3,8 +3,7 @@ import numpy as np
 import time
 import PoseModule as pm
 
-cap = cv2.VideoCapture(0, cv2.CAP_DSHOW) 
-
+cap = cv2.VideoCapture(0) 
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1200)
 
@@ -16,7 +15,7 @@ dir = 0
 pTime = 0
 while True:
     success, img = cap.read()
-    
+
     img = detector.findPose(img, False)
     lmList = detector.findPosition(img, False)
     # print(lmList)
@@ -53,6 +52,9 @@ while True:
     pTime = cTime
     # cv2.putText(img, str(int(fps)), (50, 100), cv2.FONT_HERSHEY_PLAIN, 5,
     #             (255, 0, 0), 5)
+    
+    # if cv2.waitKey(1) & 0xFF == ord('q'): #for my mac
+    #     break
 
     cv2.imshow("Image", img)
     cv2.waitKey(1)
