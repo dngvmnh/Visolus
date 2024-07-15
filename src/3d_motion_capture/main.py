@@ -1,7 +1,7 @@
 import cv2
 from cvzone.PoseModule import PoseDetector
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("src/3d_motion_capture/Video.mp4")
 
 detector = PoseDetector()
 posList = []
@@ -13,7 +13,9 @@ while True:
     if bboxInfo:
         lmString = ''
         for lm in lmList:
-            lmString += f'{lm[1]},{img.shape[0] - lm[2]},{lm[3]},'
+            # lmString += f'{lm[1]},{img.shape[0] - lm[2]},{lm[3]},'
+            lmString += f'{lm[1]},{img.shape[0] - lm[2]},'
+
         posList.append(lmString)
 
     print(len(posList))
