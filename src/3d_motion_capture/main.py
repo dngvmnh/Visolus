@@ -1,7 +1,9 @@
 import cv2
 from cvzone.PoseModule import PoseDetector
 
-cap = cv2.VideoCapture("src/3d_motion_capture/Video.mp4")
+# cap = cv2.VideoCapture("src/3d_motion_capture/Video.mp4")
+cap = cv2.VideoCapture(0)
+
 
 detector = PoseDetector()
 posList = []
