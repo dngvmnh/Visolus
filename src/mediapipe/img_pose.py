@@ -6,8 +6,8 @@ mp_drawing_styles = mp.solutions.drawing_styles
 mp_pose = mp.solutions.pose
 
 # For static images:
-IMAGE_FILES = ["IMAGE_FILES/Screenshot 2024-07-04 014315.png", 
-               "IMAGE_FILES/Screenshot 2024-07-04 014343.png"]
+IMAGE_FILES = ["Visolus/IMAGE_FILES/foot/side_lying_leg_lift.png", 
+               "Visolus/IMAGE_FILES/back/bird_dog.png"]
 BG_COLOR = (192, 192, 192) # gray
 with mp_pose.Pose(
     static_image_mode=True,
@@ -46,7 +46,7 @@ with mp_pose.Pose(
         mp_pose.POSE_CONNECTIONS,
         landmark_drawing_spec=mp_drawing_styles.get_default_pose_landmarks_style())
     
-    # cv2.imwrite('annotated_image' + str(idx) + '.png', annotated_image)
+    cv2.imwrite('annotated_image' + str(idx) + '.png', annotated_image)
     # Plot pose world landmarks.
     mp_drawing.plot_landmarks(
         results.pose_world_landmarks, mp_pose.POSE_CONNECTIONS)
