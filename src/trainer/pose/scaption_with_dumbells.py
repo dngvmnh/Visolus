@@ -6,7 +6,9 @@ import matplotlib.pyplot as plt
 
 def video_processing():
     # Open the webcam
-    cap = cv2.VideoCapture("Visolus/VIDEO_FILES/shoulders & arms/neural-lide_median_bias.mp4")
+    # cap = cv2.VideoCapture("Visolus/VIDEO_FILES/shoulders & arms/neural-lide_median_bias.mp4")
+    cap = cv2.VideoCapture(0)
+
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1200)
     cap.set(cv2.CAP_PROP_FPS, 60)
