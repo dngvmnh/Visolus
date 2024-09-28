@@ -9,12 +9,12 @@ The project’s results underscore the effectiveness of combining computer visio
 
 **Visolus** is the name chosen for this system, symbolizing the fusion of vision and well-being. Derived from two Latin words: *visio* (meaning vision) and *salus* (meaning well-being), **Visolus** reflects the system's goal of improving health and wellness through the power of vision technology.
 
-https://github.com/dngvmnh/Visolus/assets/IIR_UT_ER_Visolus_Poster.png?raw=true
+https://github.com/dngvmnh/Visolus/assets/IIR_UT_ER_Visolus_Poster.png
 
 ## Graphical Abstract  
 Pipeline workflow:
 
-https://github.com/dngvmnh/Visolus/assets/Pipeline_workflow.jpg?raw=true
+https://github.com/dngvmnh/Visolus/assets/Pipeline_workflow.jpg
 
 ## Project Summary
 
