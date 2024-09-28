@@ -1,5 +1,4 @@
-# Project Title 
-**Computer Vision in Physical Therapy**   
+# Computer Vision in Physical Therapy
 
 ## Abstract  
 Integrating computer vision into physical therapy enhances rehabilitation by providing real-time assessments and feedback, addressing challenges such as inconsistent monitoring and patient non-compliance. This project aims to develop a system that accurately tracks and analyzes user movements in real-time, thereby supporting the effectiveness of physical therapy routines. The system employs motion sensors, tracking cameras, and advanced motion analysis software, including tools such as the Mediapipe library with BlazePose GHUM 3D models and OpenCV for motion tracking. These tools enable the system to track movements, calculate joint angles, and analyze user posture with high precision.
@@ -10,12 +9,12 @@ The project’s results underscore the effectiveness of combining computer visio
 
 **Visolus** is the name chosen for this system, symbolizing the fusion of vision and well-being. Derived from two Latin words: *visio* (meaning vision) and *salus* (meaning well-being), **Visolus** reflects the system's goal of improving health and wellness through the power of vision technology.
 
-[Link to Poster](<insert-poster-link-here>)
+https://github.com/dngvmnh/Visolus/blob/main/assets/IIR_UT_ER_Visolus_Poster.png
 
 ## Graphical Abstract  
 Pipeline workflow:
 
-![Pipeline Workflow](<insert-image-link-here>)
+https://github.com/dngvmnh/Visolus/blob/main/assets/Pipeline_workflow.jpg
 
 ## Project Summary
 
