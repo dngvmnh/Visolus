@@ -87,8 +87,6 @@ This project successfully integrates computer vision and voice recognition techn
 
 The system demonstrated a 75% accuracy rate in tracking exercise repetitions. Voice recognition capabilities and real-time feedback mechanisms make this system a promising tool for improving rehabilitation outcomes. Further research is necessary to optimize the technology for complex movements and develop cost-effective, scalable solutions for home-based therapy.
 
-**Visolus**, a fusion of *visio* (vision) and *salus* (well-being), encapsulates the system's mission: to enhance physical well-being through the power of vision technology.
-
 ## Report
 For further information, refer to this report: [View on GitHub](https://github.com/dngvmnh/Visolus/blob/main/assets/IIR_UT_ER_Visolus_BTV.pdf) or [Download PDF](https://github.com/dngvmnh/Visolus/raw/main/assets/IIR_UT_ER_Visolus_BTV.pdf).
 
