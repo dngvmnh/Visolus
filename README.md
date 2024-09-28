@@ -1,5 +1,3 @@
-# Computer Vision in Physical Therapy
-
 ## Abstract  
 Integrating computer vision into physical therapy enhances rehabilitation by providing real-time assessments and feedback, addressing challenges such as inconsistent monitoring and patient non-compliance. This project aims to develop a system that accurately tracks and analyzes user movements in real-time, thereby supporting the effectiveness of physical therapy routines. The system employs motion sensors, tracking cameras, and advanced motion analysis software, including tools such as the Mediapipe library with BlazePose GHUM 3D models and OpenCV for motion tracking. These tools enable the system to track movements, calculate joint angles, and analyze user posture with high precision.
 
